@@ -1,0 +1,19 @@
+@import-normalize;
+
+@import "./settings/_colors.scss";
+@import "./settings/_fonts.scss";
+
+
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-base;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
