@@ -42,13 +42,11 @@
           a {
             font-size: 36px;
             text-transform: uppercase;
-            font-weight: 300;
-            border: 1px solid $main-dark;
+            border: 1px solid $secondary-dark;
             width: 310px;
             padding: 20px 0;
             text-align: center;
-            color: $main-dark;
-            
+            color: $secondary-dark; //sciagnij sans light
           }
       }
     }
