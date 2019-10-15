@@ -1,0 +1,34 @@
+@import "../scss/settings/colors";
+
+
+nav {
+    width: 100%;
+    color: $main-dark;
+    .auth{
+        text-align: right;
+        padding-bottom: 20px;
+        span {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 14px;
+            color: $secondary-dark;
+
+            a{
+                color: $main-dark;
+            }
+        }
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            margin: 0 10px;
+            font-size: 18px;
+            a {
+             color: $main-dark;    
+            }
+        }
+    }
+}
