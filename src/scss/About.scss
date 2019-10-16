@@ -8,12 +8,13 @@
     div{
         height: 100%;
         width: 50%;
-        padding: 150px 100px;
+        padding: 150px 152px;
     }
 
     .about-info{
         @include header-decoration();
         text-align: right;
+        background: #F0F1F1;
 
         p{
             font-size: 30px;

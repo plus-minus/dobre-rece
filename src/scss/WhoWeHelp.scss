@@ -1,4 +1,62 @@
+@import "./settings/colors";
+@import "./settings/mixins";
+@import "./settings/fonts";
+
 #home-whoWeHelp {
-    background: darkkhaki;
-    height: 980px
+    height: 980px;
+    padding: 30px 150px;
+    @include header-decoration();
+
+    .tabs{
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        margin: 50px auto;
+        padding: 0;
+        .tab {
+        font-size: 24px;
+        width: 30%;
+        padding: 15px;   
+        display: flex;
+        align-items: center;   
+        text-align: center;   
+        justify-content: center;
+        }
+    }
+    .tab-content{
+        margin: 50px;
+        p {
+            text-align: center;
+            width: 50%;
+            margin: 20px auto;
+            margin-bottom: 70px;
+            font-size: 22px;
+            line-height: 1.5;
+        }
+
+        .foundation {
+            display: flex;
+            justify-content: space-between;
+            font-family: $font-alt;
+            font-weight: 300;
+            margin: 30px 0;
+            .fundName{
+                font-size: 26px;
+                font-weight: lighter;
+                margin: 0;
+            }
+            .goal {
+                font-size: 18px;
+                font-weight: lighter;
+                font-style: italic;
+                width: 100%;
+                margin: 0;
+            }
+            .what {
+                font-size: 18px;
+                font-weight: lighter;
+            }
+
+        }
+    }
 }

@@ -19,6 +19,7 @@
 @mixin link-button(){
             a {
             font-size: 36px;
+            display: inline-block;
             text-transform: uppercase;
             border: 1px solid $secondary-dark;
             width: 310px;
