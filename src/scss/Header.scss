@@ -1,4 +1,5 @@
 @import "../scss/settings/colors";
+@import "../scss/settings/mixins";
 
 #home-header {
   height: 963px;
@@ -19,35 +20,16 @@
     margin-right: 142px;
     article {
       margin-top: 250px;
-      h1 {
-        position: relative;
-        font-size: 38px;
-        text-align: center;
-        font-weight: 400;
-        color: $main-dark;
-        }
-      h1:after {
-        display: block;
-        content: url(../assets/img/Decoration.svg);
-        position: absolute;
-        left: calc(50% - 125px);
-        top: 135%;
-      }
+
+      @include header-decoration();
 
       .cta {
           display: flex;
           justify-content: space-between;
           margin-top: 70px;
           padding: 70px;
-          a {
-            font-size: 36px;
-            text-transform: uppercase;
-            border: 1px solid $secondary-dark;
-            width: 310px;
-            padding: 20px 0;
-            text-align: center;
-            color: $secondary-dark; //sciagnij sans light
-          }
+          
+          @include link-button();
       }
     }
   }

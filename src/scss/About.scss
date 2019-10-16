@@ -1,4 +1,37 @@
+@import "./settings/mixins";
+@import "./settings/colors";
+
 #home-about{
-    background: darkblue;
     height: 935px;
+    display: flex;
+    color: $main-dark;
+    div{
+        height: 100%;
+        width: 50%;
+        padding: 150px 100px;
+    }
+
+    .about-info{
+        @include header-decoration();
+        text-align: right;
+
+        p{
+            font-size: 30px;
+            letter-spacing: -0.6px;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .signature {
+            background: url(../assets/img/Signature.svg) no-repeat;
+            background-size: contain;
+            height: 200px;
+            width: 200px;
+            display: inline-block;
+        }
+    }
+
+    .about-img{
+        background: url(../assets/img/People.jpg) no-repeat;
+        background-size: cover;
+    }
 }

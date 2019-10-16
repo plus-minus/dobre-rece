@@ -1,4 +1,70 @@
+@import "../scss/settings/mixins";
+@import "../scss/settings/colors";
+
 #home-simpleSteps {
     height: 724px;
-    background: crimson;
+    padding: 20px 0;
+    text-align: center;
+    @include header-decoration();
+    
+
+    .steps{
+        background: #F0F1F1;
+        display: flex;
+        justify-content: space-around;
+        margin: 70px 0;
+        margin-bottom: 20px;
+        height: 325px;
+        padding: 0 100px;
+        .step {
+            width: 20%;
+            padding: 60px;
+            color: $main-dark;
+            .step-img {
+                background-size: contain;
+                width: 83px;
+                height: 83px;
+                margin: 0 auto;
+                background-repeat: no-repeat;
+            }
+            .shirt{
+               background: url(../assets/img/Icon-1.svg); 
+            }
+            .bag{
+                background: url(../assets/img/Icon-2.svg);
+            }
+            .zoom{
+                background: url(../assets/img/Icon-3.svg);
+            }
+            .order{
+                background: url(../assets/img/Icon-4.svg);
+            }
+
+            .step-desc {
+                position: relative;
+                font-size: 18px;
+            }
+            .step-desc:after {
+                position: absolute;
+                content: "";
+                width: 80px;
+                height: 1px;
+                background: $main-dark;
+                bottom: -10px;
+                left: calc(50% - 40px);
+            }
+
+            .step-tip {
+                margin-top: 5px;
+                font-size: 16px;
+            }
+        }
+    }
+
+    @include link-button();
+    a {
+        display: inline-block;
+        padding-top: 20px;
+        margin-top: 30px;
+    }
 }

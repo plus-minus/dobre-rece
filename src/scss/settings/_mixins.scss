@@ -1,0 +1,29 @@
+@mixin header-decoration(){
+          h1 {
+        position: relative;
+        font-size: 38px;
+        text-align: center;
+        font-weight: 400;
+        color: $main-dark;
+        margin-bottom: 100px;
+        }
+      h1:after {
+        display: block;
+        content: url(../../assets/img/Decoration.svg);
+        position: absolute;
+        left: calc(50% - 125px);
+        top: 135%;
+      }
+}
+
+@mixin link-button(){
+            a {
+            font-size: 36px;
+            text-transform: uppercase;
+            border: 1px solid $secondary-dark;
+            width: 310px;
+            padding: 20px 0;
+            text-align: center;
+            color: $secondary-dark; //sciagnij sans light
+          }
+}
