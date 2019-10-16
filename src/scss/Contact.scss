@@ -1,4 +1,99 @@
-#home-contact{
-    background: violet;
-    height: 1026px;
+@import "./settings/mixins";
+@import "./settings/colors";
+
+#home-contact {
+  height: 1026px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+    background: url(../assets/img/Background-Contact-Form.jpg);
+    z-index: -10;
+  }
+
+  form {
+    margin-left: 65%;
+    @include header-decoration();
+    width: 30%;
+    padding-top: 200px;
+    section {
+      padding: 0 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .text-input {
+        width: 49%;
+        padding: 10px 0;
+        label,
+        input {
+          display: block;
+          width: 100%;
+          color: $main-dark;
+          background: transparent;
+          margin-top:15px;
+                    outline: none;
+
+        }
+        label {
+          font-size: 16px;
+        }
+        input {
+          font-size: 18px;
+          border: none;
+          border-bottom: 1px solid $main-dark;
+          color: $main-dark;
+          &::placeholder {
+            color: #3c3c3c26;
+          }
+        }
+      }
+      .textarea-input {
+        width: 100%;
+        padding: 10px 0;
+        margin-top: 20px;
+        label,
+        textarea {
+          display: block;
+          width: 100%;
+          background: transparent;
+        }
+
+        textarea {
+          border: none;
+          min-width: 100%;
+          max-width: 100%;
+          height: 200px;
+          border-bottom: 1px solid $main-dark;
+          color: $main-dark;
+          margin-top:20px;
+          resize: none;
+          line-height: 1.4;
+          font-size: 18px;
+          outline: none;
+                    &::placeholder {
+            color: #3c3c3c26;
+          }
+   
+        }
+      }
+    
+        button {
+        display: inline-block;
+        padding: 15px 40px;
+        margin-top: 20px;
+        margin-right: 0;
+        background: none;
+        border: 1px solid $main-dark;
+        margin-left: 75%;
+        font-size: 18px;
+        cursor: pointer;
+    }
+  }
+}
 }

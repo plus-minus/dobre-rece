@@ -6,14 +6,15 @@
         font-weight: 400;
         color: $main-dark;
         margin-bottom: 100px;
-        }
-      h1:after {
+              &:after {
         display: block;
         content: url(../../assets/img/Decoration.svg);
         position: absolute;
         left: calc(50% - 125px);
         top: 135%;
       }
+        }
+
 }
 
 @mixin link-button(){
