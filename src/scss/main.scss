@@ -27,3 +27,8 @@ a {
 .active {
   border: 1px solid $main-dark;
 }
+
+.highlight {
+  border: 1px solid $border;
+  padding: 10px;
+}

@@ -8,7 +8,7 @@ function Navigation(){
         <nav>
             <div className="auth">
                 <span><Link to="/logowanie">Zaloguj</Link></span>
-                <span><Link to="/rejestracja">Załóż konto</Link></span>
+                <span className="highlight"><Link to="/rejestracja">Załóż konto</Link></span>
             </div>
             <ul className="menu">
                 <li><Link to="/" >Start</Link></li>
