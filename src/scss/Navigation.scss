@@ -28,6 +28,16 @@ nav {
             font-size: 18px;
             a {
              color: $main-dark;    
+             cursor: pointer;
+             padding:10px;
+             border: 1px solid white;
+             &:hover {
+                border-color: $main-dark;
+             }
+             .active{
+                border-color: $main-dark;
+             }
+             
             }
         }
     }

@@ -8,18 +8,25 @@ import Register from "./components/Register";
 
 import "./scss/App.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Route exact path="/" component={Home} />
-        <Route  path="/oddaj-rzeczy" component={OddajRzeczy} />
-        <Route  path="/logowanie" component={Login} />
-        <Route  path="/rejestracja" component={Register} />
-        <Route  path="/wylogowano" component={Logout} />
-      </BrowserRouter>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
+
+  render(){
+    return (
+      <div className="App">
+        <BrowserRouter>
+          <Route exact path="/" component={Home} />
+          <Route path="/oddaj-rzeczy" component={OddajRzeczy} />
+          <Route path="/logowanie" component={Login} />
+          <Route path="/rejestracja" component={Register} />
+          <Route path="/wylogowano" component={Logout} />
+        </BrowserRouter>
+      </div>
+    );
+  }// koniec render
 }
 
 export default App;
