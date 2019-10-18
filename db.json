@@ -1,0 +1,188 @@
+{
+    "foundations": [
+        {
+            "nazwa": "Dbam o Zdrowie 1",
+            "cel": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+            "dary": [
+                "ubrania",
+                "jedzenie",
+                "sprzęt AGD",
+                "meble",
+                "zabawki"
+            ]
+        },
+        {
+            "nazwa": "Dbam o Zdrowie 2",
+            "cel": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+            "dary": [
+                "ubrania",
+                "jedzenie",
+                "sprzęt AGD",
+                "meble",
+                "zabawki"
+            ]
+        },
+        {
+            "nazwa": "Dbam o Zdrowie 3",
+            "cel": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+            "dary": [
+                "ubrania",
+                "jedzenie",
+                "sprzęt AGD",
+                "meble",
+                "zabawki"
+            ]
+        },
+        {
+            "nazwa": "Dbam o Zdrowie 4",
+            "cel": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+            "dary": [
+                "ubrania",
+                "jedzenie",
+                "sprzęt AGD",
+                "meble",
+                "zabawki"
+            ]
+        },
+        {
+            "nazwa": "Dbam o Zdrowie 5",
+            "cel": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+            "dary": [
+                "ubrania",
+                "jedzenie",
+                "sprzęt AGD",
+                "meble",
+                "zabawki"
+            ]
+        },
+        {
+            "nazwa": "Dbam o Zdrowie 6",
+            "cel": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+            "dary": [
+                "ubrania",
+                "jedzenie",
+                "sprzęt AGD",
+                "meble",
+                "zabawki"
+            ]
+        },
+        {
+            "nazwa": "Dbam o Zdrowie 7",
+            "cel": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+            "dary": [
+                "ubrania",
+                "jedzenie",
+                "sprzęt AGD",
+                "meble",
+                "zabawki"
+            ]
+        },
+        {
+            "nazwa": "Dbam o Zdrowie 8",
+            "cel": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+            "dary": [
+                "ubrania",
+                "jedzenie",
+                "sprzęt AGD",
+                "meble",
+                "zabawki"
+            ]
+        },
+        {
+            "nazwa": "Dbam o Zdrowie 9",
+            "cel": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+            "dary": [
+                "ubrania",
+                "jedzenie",
+                "sprzęt AGD",
+                "meble",
+                "zabawki"
+            ]
+        }
+    ],
+    "organizations": [
+        {
+            "nazwa": "Lorem Ipsum 1",
+            "cel": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "dary": [
+                "Egestas",
+                "sed",
+                "tempus"
+            ]
+        },
+        {
+            "nazwa": "Lorem Ipsum 2",
+            "cel": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "dary": [
+                "Egestas",
+                "sed",
+                "tempus"
+            ]
+        },
+        {
+            "nazwa": "Lorem Ipsum 3",
+            "cel": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "dary": [
+                "Egestas",
+                "sed",
+                "tempus"
+            ]
+        },
+        {
+            "nazwa": "Lorem Ipsum 4",
+            "cel": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "dary": [
+                "Egestas",
+                "sed",
+                "tempus"
+            ]
+        },
+        {
+            "nazwa": "Lorem Ipsum 5",
+            "cel": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "dary": [
+                "Egestas",
+                "sed",
+                "tempus"
+            ]
+        },
+        {
+            "nazwa": "Lorem Ipsum 6",
+            "cel": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "dary": [
+                "Egestas",
+                "sed",
+                "tempus"
+            ]
+        }
+    ],
+    "local": [
+        {
+            "nazwa": "Zbiórka 1",
+            "cel": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "dary": [
+                "Egestas",
+                "sed",
+                "tempus"
+            ]
+        },
+        {
+            "nazwa": "Zbiórka 2",
+            "cel": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "dary": [
+                "Egestas",
+                "sed",
+                "tempus"
+            ]
+        },
+        {
+            "nazwa": "Zbiórka 3",
+            "cel": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "dary": [
+                "Egestas",
+                "sed",
+                "tempus"
+            ]
+        }
+    ]
+}

@@ -6,7 +6,7 @@ import About from "./About";
 import WhoWeHelp from "./WhoWeHelp";
 import Contact from "./Contact";
 
-function Home(){
+function Home(props){
     return (
         <>
         <Header/>
@@ -14,7 +14,7 @@ function Home(){
         <SimpleSteps/>
         <About/>
         <WhoWeHelp/>
-        <Contact/>
+        <Contact sendContactInfo={props.sendContactInfo}/>
         </>
     );
 }

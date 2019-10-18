@@ -21,6 +21,10 @@
         align-items: center;   
         text-align: center;   
         justify-content: center;
+        cursor: pointer;
+        &.selected {
+            border: 1px solid $main-dark;
+        }
         }
     }
     .tab-content{

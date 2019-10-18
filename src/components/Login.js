@@ -19,7 +19,7 @@ function Login() {
                         <input type="password" />
                 </div>
                 <div className="buttons">
-                        <button><Link to="/rejestracja">Załóż konto</Link></button>
+                        <button ><Link to="/rejestracja">Załóż konto</Link></button>
                     <button className="active">Zaloguj się</button>
                 </div>
                 </form>
