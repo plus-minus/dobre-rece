@@ -17,6 +17,14 @@
         width: 45%;
         margin: 0 auto;
         margin-top: 100px;
+        .error-msg{
+            color: red;
+            font-size: 14px;
+        }
+        .success-msg {
+            color: green;
+            text-align: center;
+        }
         
 
         .inputs{
@@ -56,6 +64,7 @@
                 font-size: 18px;
                 border: none;
                 margin: 0 auto;
+                cursor: pointer;
                 &.active {
                     border: 1px solid $main-dark;
                 }

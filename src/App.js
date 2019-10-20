@@ -9,33 +9,13 @@ import Register from "./components/Register";
 import "./scss/App.scss";
 
 class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {};
-
-    this.sendContactInfo = this.sendContactInfo.bind(this);
-  }
-
-  sendContactInfo(name, email, message){
-
-      fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ name, email, message })
-      })
-      .then(res => console.log(res.status))
-      .catch(err => console.warn(err))
- 
-  }
 
   render(){
     return (
       <div className="App">
         <BrowserRouter>
         <Switch>
-          <Route exact path="/" render={(props)=> <Home sendContactInfo={this.sendContactInfo}/>} />
+          <Route exact path="/" component={Home}/>} />
           <Route path="/oddaj-rzeczy" component={OddajRzeczy} />
           <Route path="/logowanie" component={Login} />
           <Route path="/rejestracja" component={Register} />

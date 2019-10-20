@@ -14,7 +14,7 @@ function Home(props){
         <SimpleSteps/>
         <About/>
         <WhoWeHelp/>
-        <Contact sendContactInfo={props.sendContactInfo}/>
+        <Contact/>
         </>
     );
 }

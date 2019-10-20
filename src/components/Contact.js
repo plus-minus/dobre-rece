@@ -1,6 +1,7 @@
 import React from "react";
 import "../scss/Contact.scss";
 import Footer from "./Footer";
+import validator from "./validation";
 
 class Contact extends React.Component {
     constructor(){
@@ -8,7 +9,14 @@ class Contact extends React.Component {
         this.state = {
             name: "",
             email: "",
-            msg: ""
+            msg: "",
+            success: false,
+            formUsed: false,
+            errors: {
+                name: null,
+                email: null, 
+                msg: null
+            }
         };
         this.change = this.change.bind(this);
         this.submit = this.submit.bind(this);
@@ -16,68 +24,88 @@ class Contact extends React.Component {
 
     change(e){
         const el = e.target;
+        const id = el.id;
+        const value = el.value;
 
-        this.setState({
-            [el.id]: (el.value.trim())
-        });
-    }
+       if( !validator[id].test( value.trim() ) ){
+           this.setState({
+               [id]: value,
+               errors: {
+                   ...this.state.errors,
+                   [id]: validator[id].errorMsg
+               },
+               formUsed: true
+           });
+       }else {
+           this.setState({
+               [id]: value,
+               formUsed: true,
+               errors: {
+                   ...this.state.errors,
+                   [id]: null
+               }
+           })
+       }
 
-    validateMsg(msg){
-        return typeof msg === "string" && msg.length > 120;
-    }
-    validateName(name){
-        return typeof name === "string" && name.length > 0 && !name.includes(" ");
-    }
-    validateEmail(email){
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
+
     }
 
     submit(e){
         e.preventDefault();
 
-        const {name, email, msg} = this.state;
+        const {name, email, msg, errors, formUsed} = this.state;
         if (
-          this.validateName(name) &&
-          this.validateEmail(email) &&
-          this.validateMsg(msg)
+            errors.name || errors.email || errors.msg || !formUsed
         ){
-            this.props.sendContactInfo(name, email, msg);
-
-        }else{
             console.warn("Bład walidacji");
+        }else{
+
+            fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ name, email, message: msg })
+            })
+                .then(res => {
+                    if(res.status === 200){
+                        this.setState({
+                            success: true,
+                            name: "",
+                            email: "",
+                            msg: ""
+                        })
+                    }
+                })
+                .catch(err => console.warn(err))
         }
 
-        this.setState({
-            name: "",
-            email: "",
-            msg: ""
-        });
     }
 
     render(){
+       const { errors, success} = this.state;
         return (
             <section id="home-contact">
                 <form onSubmit={this.submit}>
                     <h1>Skontaktuj się z nami</h1>
 
-                    <p className="success-msg"></p>
+                    <p className="success-msg">{success? "Wiadomość została wysłana! Wkrótce się skontaktujemy.": null}</p>
                     <section>
                         <div className="text-input">
                             <label>Wpisz swoje imię</label>
                             <input id="name" type="text" value={this.state.name} onChange={this.change} placeholder="Krzysztof" />
-                            <p className="error-msg"></p>
+                            {typeof errors.name === "string" && <p className="error-msg">{errors.name}</p>}
                         </div>
                         <div className="text-input">
                             <label>Wpisz swój email</label>
                             <input id="email"type="email" value={this.state.email} onChange={this.change} placeholder="abc@xyz.pl" />
-                            <p className="error-msg"></p>
+                            {typeof errors.email === "string" && <p className="error-msg">{errors.email}</p>}
                         </div>
                         <div className="textarea-input">
                             <label>Wpisz swoją wiadomość</label>
                             <textarea id="msg" value={this.state.msg} onChange={this.change} placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
                             </textarea>
-                            <p className="error-msg"></p>
+                            {typeof errors.msg === "string" && <p className="error-msg">{errors.msg}</p>}
                         </div>
                         <button >Wyślij</button>
                     </section>

@@ -5,7 +5,7 @@ class WhoWeHelp extends React.Component {
     constructor() {
         super();
         this.state = {
-            selected: "loc", //fou/org/loc
+            selected: "loc",
             founds: [],
             orgs: [],
             local:[]
@@ -47,7 +47,7 @@ class WhoWeHelp extends React.Component {
                     {
                         array.length > 0 ?
                             array.map((f, i) => {
-                                return <><li key={i} className="foundation">
+                                return <li key={i} className="foundation">
                                     <div>
                                         <h3 className="fundName">Fundacja {f.nazwa}</h3>
                                         <p className="goal">Cel i misja: {f.cel}</p>
@@ -55,8 +55,8 @@ class WhoWeHelp extends React.Component {
                                     <div className="What">{f.dary.join(", ")}</div>
 
                                 </li>
-                                <hr /></>
-                            }).slice(0, 3)
+                               
+                            })
                             :
                             <h3>Nie znaleziono </h3>
                     }

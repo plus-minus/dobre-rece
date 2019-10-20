@@ -3,7 +3,7 @@
 @import "./settings/fonts";
 
 #home-whoWeHelp {
-    height: 980px;
+    min-height: 980px;
     padding: 30px 150px;
     @include header-decoration();
 
@@ -45,6 +45,8 @@
             font-family: $font-alt;
             font-weight: 300;
             margin: 30px 0;
+            border-bottom: 1px solid $main-dark;
+            padding-bottom: 20px;
             .fundName{
                 font-size: 26px;
                 font-weight: lighter;
