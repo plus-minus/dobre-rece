@@ -39,7 +39,7 @@
             line-height: 1.5;
         }
 
-        .foundation {
+        .item {
             display: flex;
             justify-content: space-between;
             font-family: $font-alt;
@@ -47,7 +47,7 @@
             margin: 30px 0;
             border-bottom: 1px solid $main-dark;
             padding-bottom: 20px;
-            .fundName{
+            .name{
                 font-size: 26px;
                 font-weight: lighter;
                 margin: 0;
@@ -64,6 +64,20 @@
                 font-weight: lighter;
             }
 
+        }
+    }
+
+    .pagination{
+        .pagination-button{
+            border: none;
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            background: transparent;
+            &.active {
+                border: 1px solid $main-dark;
+            }
         }
     }
 }
