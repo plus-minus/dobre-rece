@@ -59,7 +59,7 @@ class Login extends React.Component {
             console.warn("Bład walidacji");
         } else {
 
-            fetch("http://localhost:3001/users?email="+email, {
+            fetch("http://localhost:3000/users?email="+email, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"

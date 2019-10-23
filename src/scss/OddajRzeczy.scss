@@ -1,0 +1,24 @@
+.important {
+  height: 179px;
+  background: #fad648;
+}
+.oddajRzeczyForm {
+  width: 100%;
+
+  .form {
+    background: url(../assets/img/Background-Form.jpg) no-repeat;
+    height: 883px;
+    h3 {
+      margin: 0;
+      padding: 20px 30px;
+    }
+    button {
+      margin: 10px 20px;
+      background: none;
+      border: 1px solid black;
+      outline: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  }
+}

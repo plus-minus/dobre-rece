@@ -1,0 +1,25 @@
+@import "./settings/mixins";
+@import "./settings/colors";
+
+#oddajRzeczy-header {
+  background: url(../assets/img/Form-Hero-Image.jpg) no-repeat;
+  height: 853px;
+  width: 100%;
+  display: flex;
+    .hero-image {
+    width: 50%;
+    height: 100%;
+  }
+
+    .hero-info {
+    padding-top: 50px;
+    width: 50%;
+    height: 100%;
+    margin-right: 142px;
+    article {
+      margin-top: 250px;
+
+      @include header-decoration();
+    }
+}
+}

@@ -59,7 +59,7 @@ class  Register extends React.Component {
       console.warn("Bład walidacji");
     } else {
 
-      fetch("http://localhost:3001/users", {
+      fetch("http://localhost:3000/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
