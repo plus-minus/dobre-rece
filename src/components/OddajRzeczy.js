@@ -5,17 +5,15 @@ import OddajRzeczyHeader from "./OddajRzeczyHeader";
 import "../scss/OddajRzeczy.scss";
 import {incrementStep, decrementStep} from "../redux/actions/actionCreators";
 
-function OddajRzeczy(props) {
-
-    return (
+const OddajRzeczy = ({ onDecrementStep, onIncrementStep, step }) => (
         <>
             <OddajRzeczyHeader />
             <section className="oddajRzeczyForm">
                 <div className="important"></div>
                 <div className="form">
-                    <h3>Krok {props.step}/4</h3>
-                    <button onClick={props.onDecrementStep} >Wstecz</button>
-                    <button onClick={props.onIncrementStep}>Dalej</button>
+                    <h3>Krok {step}/4</h3>
+                    <button onClick={onDecrementStep} >Wstecz</button>
+                    <button onClick={onIncrementStep}>Dalej</button>
                 </div>
 
             </section>
@@ -23,7 +21,6 @@ function OddajRzeczy(props) {
             <Contact />
         </>
     );
-}
 
 const mapStateToProps = (state) => {
     return {
@@ -35,10 +32,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onIncrementStep: () => dispatch(incrementStep()),
         onDecrementStep: () => dispatch(decrementStep())
+       // updateForm: (data) => dispatch(updateForm(data))
     };
 }
 
-const OddajRzeczyContainer = connect(mapStateToProps, mapDispatchToProps)(OddajRzeczy);
-
-
-export default OddajRzeczyContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(OddajRzeczy);
